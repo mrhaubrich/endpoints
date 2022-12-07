@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Request, Response } from 'express';
-import { Constants } from '../../../app/classes/constants';
+import { Constants } from '../common/classes/Contants';
 
 export interface IEndpoint {
     name: string;

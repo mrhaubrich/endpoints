@@ -1,3 +1,4 @@
+import { IEndpoint } from './BaseEndpoint';
 import { GetEndpoint } from './get/GetEndpoint';
 
 export class Endpoints {
@@ -10,6 +11,14 @@ export class Endpoints {
         this.allEndpoints.forEach((endpoint) => {
             endpoint.init();
         });
+    }
+
+    public static addEndpoint(endpoint: IEndpoint): void {
+        this.allEndpoints.push(endpoint);
+    }
+
+    public static addEndpoints(endpoints: IEndpoint[]): void {
+        this.allEndpoints = this.allEndpoints.concat(endpoints);
     }
 
 }

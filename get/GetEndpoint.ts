@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import { Constants } from '../../../../app/classes/constants';
-import { ResponseCodes } from '../../../../app/enum';
+import { ResponseCodes } from '../../api/requestCodes';
+import { Constants } from '../../common/classes/Contants';
 import { BaseEndpoint } from '../BaseEndpoint';
 
 export class GetEndpoint extends BaseEndpoint {
@@ -18,7 +18,6 @@ export class GetEndpoint extends BaseEndpoint {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     run(req: Request, res: Response): void {
         if (Constants.api.checkBot()) {
-            console.log('ENTROU NESSE');
             res.send({ status: 'online' });
             return;
         }
