@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Request, Response } from 'express';
-import { Constants } from '../common/classes/Constants';
+import { PlayerConstants } from '../constants/constants';
 
 export interface IEndpoint {
     name: string;
@@ -29,7 +29,7 @@ export class BaseEndpoint implements IEndpoint {
     }
 
     init(): void {
-        Constants.api.addEndpoint(this);
+        PlayerConstants.api.addEndpoint(this);
     }
 
 }
