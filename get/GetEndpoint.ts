@@ -1,7 +1,8 @@
 import { Request, Response } from 'express';
 import { ResponseCodes } from '../../api/requestCodes';
-import { BaseEndpoint } from '../BaseEndpoint';
 import { Constants } from '../../common/classes/Constants';
+import { BaseEndpoint } from '../BaseEndpoint';
+
 
 export class GetEndpoint extends BaseEndpoint {
 
