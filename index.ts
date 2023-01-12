@@ -3,7 +3,7 @@ import { GetEndpoint } from './get/GetEndpoint';
 
 export class Endpoints {
 
-    private static allEndpoints = [
+    private static allEndpoints: IEndpoint[] = [
         new GetEndpoint(),
     ];
 

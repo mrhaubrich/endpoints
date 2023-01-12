@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { ResponseCodes } from '../../api/requestCodes';
 import { BaseEndpoint } from '../BaseEndpoint';
-import { PlayerConstants } from '../../constants/constants';
+import { Constants } from '../../common/classes/Constants';
 
 export class GetEndpoint extends BaseEndpoint {
 
@@ -17,7 +17,7 @@ export class GetEndpoint extends BaseEndpoint {
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     run(req: Request, res: Response): void {
-        if (PlayerConstants.api.checkBot()) {
+        if (Constants.api.checkBot()) {
             res.send({ status: 'online' });
             return;
         }
