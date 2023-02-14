@@ -30,7 +30,6 @@ export class BaseEndpoint implements IEndpoint {
 
     init(): void {
         Constants.api.addEndpoint(this);
-        Constants.api.addEndpoint(this);
     }
 
 }
